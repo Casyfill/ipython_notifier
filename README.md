@@ -18,6 +18,7 @@ It is especially useful in the Ipython, as web browser can lead to the massive d
 ## Roadmap
 
 - [x] initial sketch
+- [x] example and screen-shot
 - [ ] print job name
 - [ ] check licenses
 - [ ] check pip install
