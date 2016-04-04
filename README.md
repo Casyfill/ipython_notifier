@@ -19,8 +19,8 @@ It is especially useful in the Ipython, as web browser can lead to the massive d
 
 - [x] initial sketch
 - [x] example and screen-shot
+- [x] check pip install
 - [ ] print job name
 - [ ] check licenses
-- [ ] check pip install
 - [ ] create wheel
 - [ ] create anaconda package 
