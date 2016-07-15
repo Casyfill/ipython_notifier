@@ -20,6 +20,7 @@ It is especially useful in the Ipython, as web browser can lead to the massive d
 - [x] initial sketch
 - [x] example and screen-shot
 - [x] check pip install
+- [ ] create error_prone code
 - [ ] print job name
 - [ ] check licenses
 - [ ] create wheel
