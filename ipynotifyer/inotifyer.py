@@ -10,10 +10,8 @@ def notifyMe(txt, act='com.google.Chrome', title='Jupyter Nb'):
 
 
 def notifyOnComplete(timer=False):
-
-    def wrap(f):
-
-        def finish(*args, **kwargs):
+    def decorator(f):
+        def wrapper(*args, **kwargs):
             if timer:
                 start = time.now()
             try:
@@ -26,5 +24,5 @@ def notifyOnComplete(timer=False):
                 return r
             except Exception, e:
                 notifyMe('Exception raised:{}'.format(e))
-
-    return wrap
+        return wrapper
+    return decorator
