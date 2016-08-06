@@ -32,3 +32,37 @@ def notifyOnComplete(func, timer=False):
             notifyMe('Exception raised:{}'.format(e))
 
     return notifyOnFinish
+
+
+class notifyer(object):
+
+    def __init__(self, timer=False):
+        """
+        If there are decorator arguments, the function
+        to be decorated is not passed to the constructor!
+        """
+        self.timer = timer
+
+    def __call__(self, f):
+        """
+        If there are decorator arguments, __call__() is only called
+        once, as part of the decoration process! You can only give
+        it a single argument, which is the function object.
+        """
+
+        def notifyOnFinish(*args, **kwargs):
+
+            if self.timer:
+                start = time.now()
+            try:
+                r = f(*args, **kwargs)
+                if self.timer:
+                    delta = (time.now() - start).total_seconds()
+                    notifyMe('Job complete in {0} seconds'.format(delta))
+                else:
+                    notifyMe('Job complete!')
+                return r
+            except Exception, e:
+                notifyMe('Exception raised:{}'.format(e))
+
+            return notifyOnFinish
