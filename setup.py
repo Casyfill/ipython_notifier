@@ -10,8 +10,8 @@ useful in the Ipython, as web browser can lead to the massive destruction :-)
 '''
 
 setup(name='inotifyer',
-      version='0.2.a',
-      description='simple notification decorator, now with exception print',
+      version='0.3.a',
+      description='timer included',
       license='BSD',
       author='Philipp Kats',
       author_email='casyfill@gmail.com',
