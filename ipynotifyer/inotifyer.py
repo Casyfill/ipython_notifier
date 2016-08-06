@@ -1,5 +1,5 @@
 from pync import Notifier
-from time import time
+from datetime import datetime
 
 
 def _notifyMe(txt, act='com.google.Chrome', title='Jupyter Nb'):
@@ -16,11 +16,11 @@ def notifyOnComplete(timer=None):
         def wrapper(*args, **kwargs):
             timer = f.timer
             if timer:
-                start = time.now()
+                start = datetime.now()
             try:
                 r = f(*args, **kwargs)
                 if timer:
-                    delta = (time.now() - start).total_seconds()
+                    delta = (datetime.now() - start).total_seconds()
                     _notifyMe('Job complete in {0} seconds'.format(delta))
                 else:
                     _notifyMe('Job complete!')
