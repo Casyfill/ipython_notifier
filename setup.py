@@ -10,7 +10,7 @@ useful in the Ipython, as web browser can lead to the massive destruction :-)
 '''
 
 setup(name='inotifyer',
-      version='0.3.a',
+      version='0.3.b',
       description='timer included',
       license='BSD',
       author='Philipp Kats',

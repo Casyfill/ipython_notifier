@@ -17,7 +17,7 @@ def notifyOnComplete(func, timer=False):
         func(obj): function to run
         timer(bool): if true, will print time spent on function
     '''
-    def notifyOnFinish(timer=timer):
+    def notifyOnFinish(timer=timer, *args, **kwargs):
         if timer:
             start = time.now()
         try:
