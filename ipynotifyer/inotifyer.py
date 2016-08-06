@@ -21,7 +21,7 @@ def notifyOnComplete(timer=None):
                 r = f(*args, **kwargs)
                 if timer:
                     delta = (datetime.now() - start).total_seconds()
-                    _notifyMe('Job complete in {0:2f} seconds'.format(delta))
+                    _notifyMe('Job complete in {:.3f} seconds'.format(delta))
                 else:
                     _notifyMe('Job complete!')
                 return r
