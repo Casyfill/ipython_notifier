@@ -15,8 +15,11 @@ def notifyOnComplete(func):
     prints a notifier on complete
     '''
     def notifyOnFinish(*args, **kwargs):
-        r = func(*args, **kwargs)
-        notifyMe('Job complete!')
-        return r
+        try:
+            r = func(*args, **kwargs)
+            notifyMe('Job complete!')
+            return r
+        except Exception, e:
+            notifyMe('Exception raised:{}'.format(e))
 
     return notifyOnFinish
