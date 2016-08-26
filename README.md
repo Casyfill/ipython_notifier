@@ -22,6 +22,8 @@ It is especially useful in the Ipython, as web browser can lead to the massive d
 - [x] check pip install
 - [x] exception
 - [x] timer
+- [x] now wrapper inherits docstring, name and module metadata from original function (for debugging purposes)
+- [x] simple nosetests
 - [ ] print job name
 - [ ] check licenses
 - [ ] create wheel
