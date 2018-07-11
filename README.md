@@ -1,5 +1,8 @@
 # Ipython Notifyer
 
+NOTE: this code is deprecated.
+please use [jupyter-notify](https://github.com/ShopRunner/jupyter-notify) instead.
+
 Ipython notifyer is dependent on **pync**  package and meant as a tiny decorator for your heavy long functions.
 It is especially useful in the Ipython, as web browser can lead to the massive destruction :-)
 
